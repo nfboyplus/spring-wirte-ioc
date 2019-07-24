@@ -12,10 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * created on 2019/7/23 16:38
- *
- * @author nfboy_liusong@163.com
- * @version 1.0.0
+ * 读取 xml 文件里的信息
  */
 public class XmlUtils {
 
