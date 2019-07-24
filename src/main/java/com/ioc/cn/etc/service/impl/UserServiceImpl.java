@@ -2,9 +2,12 @@ package com.ioc.cn.etc.service.impl;
 
 import com.ioc.cn.etc.annotation.ExtService;
 import com.ioc.cn.etc.dao.UserDao;
+import com.ioc.cn.etc.service.OrderService;
 import com.ioc.cn.etc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
 
 /**
  * created on 2019/7/22 9:34
@@ -17,6 +20,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
+
+    @Resource //使用该注解获取不到
+    private OrderService orderService;
 
     @Override
     public void add() {
@@ -40,9 +46,14 @@ public class UserServiceImpl implements UserService {
         userDao.insert(2, "刘刘",18);
     }
 
+    /**
+     * 此处的 orderService 使用的是 @Resource 注入，和 @ExtService 注入的不是同一个容器，抛出异常；
+     */
     @Override
     public void test() {
         System.out.println("---- 测试自定义注解@ExtService,注入Bean ----");
+        String param = orderService.insert();
+        System.out.println(param);
     }
 
     /**
