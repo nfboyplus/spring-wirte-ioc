@@ -1,4 +1,4 @@
-package com.ioc.cn.util;
+package com.ioc.cn.xml.util;
 
 import org.apache.commons.lang3.StringUtils;
 import org.dom4j.Attribute;

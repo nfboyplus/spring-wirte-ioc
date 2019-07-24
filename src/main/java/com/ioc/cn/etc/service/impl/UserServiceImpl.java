@@ -1,9 +1,9 @@
-package com.ioc.cn.service.impl;
+package com.ioc.cn.etc.service.impl;
 
-import com.ioc.cn.dao.UserDao;
-import com.ioc.cn.service.UserService;
+import com.ioc.cn.etc.annotation.ExtService;
+import com.ioc.cn.etc.dao.UserDao;
+import com.ioc.cn.etc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author nfboy_liusong@163.com
  * @version 1.0.0
  */
-@Service
+@ExtService
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -38,6 +38,11 @@ public class UserServiceImpl implements UserService {
         // 加入事务：抛出异常，不继续执行，上面的数据未插入到数据库，数据回滚；
         int i = 10/0;
         userDao.insert(2, "刘刘",18);
+    }
+
+    @Override
+    public void test() {
+        System.out.println("---- 测试自定义注解@ExtService,注入Bean ----");
     }
 
     /**

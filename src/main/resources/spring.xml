@@ -12,6 +12,6 @@
      	 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- XML方式注入 Bean，反射机制 -->
-    <bean id="user" class="com.ioc.cn.entity.User"></bean>
+    <bean id="user" class="com.ioc.cn.xml.entity.User"></bean>
 
 </beans>

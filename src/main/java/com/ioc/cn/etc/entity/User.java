@@ -1,4 +1,4 @@
-package com.ioc.cn.entity;
+package com.ioc.cn.etc.entity;
 
 import lombok.Data;
 

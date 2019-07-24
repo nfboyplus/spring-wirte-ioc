@@ -1,8 +1,7 @@
-package com.ioc.cn;
+package com.ioc.cn.xml;
 
-import com.ioc.cn.entity.User;
-import com.ioc.cn.service.UserService;
-import com.ioc.cn.util.ExtClassPathXmlApplicationContext;
+import com.ioc.cn.xml.service.UserService;
+import com.ioc.cn.xml.util.ExtClassPathXmlApplicationContext;
 
 /**
  * created on 2019/7/24 9:08

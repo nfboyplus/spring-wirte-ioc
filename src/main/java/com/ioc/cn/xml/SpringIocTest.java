@@ -1,6 +1,6 @@
-package com.ioc.cn;
+package com.ioc.cn.xml;
 
-import com.ioc.cn.entity.User;
+import com.ioc.cn.xml.entity.User;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

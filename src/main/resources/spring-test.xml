@@ -12,6 +12,6 @@
      	 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- XML方式注入 Bean，反射机制 -->
-    <bean id="userService" class="com.ioc.cn.service.impl.UserServiceImpl"></bean>
+    <bean id="userService" class="com.ioc.cn.xml.service.impl.UserServiceImpl"></bean>
 
 </beans>

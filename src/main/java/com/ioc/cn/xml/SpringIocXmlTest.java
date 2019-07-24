@@ -1,6 +1,6 @@
-package com.ioc.cn;
+package com.ioc.cn.xml;
 
-import com.ioc.cn.util.XmlUtils;
+import com.ioc.cn.xml.util.XmlUtils;
 import org.dom4j.DocumentException;
 
 /**
