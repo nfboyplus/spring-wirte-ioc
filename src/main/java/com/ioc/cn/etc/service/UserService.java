@@ -8,9 +8,5 @@ package com.ioc.cn.etc.service;
  */
 public interface UserService {
 
-    void add();
-
-    void insert();
-
     void test();
 }

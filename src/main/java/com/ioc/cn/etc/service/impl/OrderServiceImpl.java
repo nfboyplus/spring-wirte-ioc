@@ -1,7 +1,10 @@
 package com.ioc.cn.etc.service.impl;
 
+import com.ioc.cn.etc.annotation.ExtResource;
 import com.ioc.cn.etc.annotation.ExtService;
 import com.ioc.cn.etc.service.OrderService;
+import com.ioc.cn.etc.service.UserService;
+
 
 /**
  * created on 2019/7/24 15:46
@@ -12,10 +15,12 @@ import com.ioc.cn.etc.service.OrderService;
 @ExtService
 public class OrderServiceImpl implements OrderService {
 
+    @ExtResource
+    private UserService userService;
+
     @Override
-    public String  insert() {
-        String param = "找不到";
-        System.out.println("---- 测试能否找到该方法 ----");
-        return param;
+    public void insert() {
+        userService.test();
+        System.out.println("---- insert ----");
     }
 }

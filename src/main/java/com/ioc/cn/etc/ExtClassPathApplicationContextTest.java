@@ -1,6 +1,6 @@
 package com.ioc.cn.etc;
 
-import com.ioc.cn.etc.service.UserService;
+import com.ioc.cn.etc.service.OrderService;
 import com.ioc.cn.etc.util.ExtClassPathXmlApplicationContext;
 
 /**
@@ -9,8 +9,9 @@ import com.ioc.cn.etc.util.ExtClassPathXmlApplicationContext;
 public class ExtClassPathApplicationContextTest {
 
     public static void main(String[] args) throws Exception {
-        ExtClassPathXmlApplicationContext applicationContext = new ExtClassPathXmlApplicationContext("com.ioc.cn.etc.service");
-        UserService userService = (UserService) applicationContext.getBean("userServiceImpl");
-        userService.test();
+        ExtClassPathXmlApplicationContext applicationContext = new ExtClassPathXmlApplicationContext("com.ioc.cn.etc.service.impl");
+        OrderService orderService = (OrderService) applicationContext.getBean("orderServiceImpl");
+        orderService.insert();
+        System.out.println(orderService);
     }
 }
